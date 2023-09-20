@@ -1,0 +1,95 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-blue-white-background: #5dade2;
+  --color-text-grafite: #2f2f2f;
+  --color-text-blue: #438cbd;
+}
+
+body {
+  background-color: var(--color-blue-white-background);
+  background: linear-gradient(
+    180deg,
+    #f4fbff 6.21%,
+    rgba(93, 173, 226, 0) 198.58%
+  );
+  color: var(--color-text-grafite);
+  /* font-family: 'Lato', sans-serif; */
+  font-family: "Roboto", sans-serif;
+  /* font-family: 'Space Grotesk', sans-serif; */
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+/* style Menu bar */
+.topMenu {
+  width: 70%;
+  height: 6.5rem;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.topMenu ul {
+  display: flex;
+  flex-direction: row;
+  gap: 2.5rem;
+}
+
+.topMenu ul li {
+  list-style: none;
+}
+
+.topMenu ul li a {
+  text-decoration: none;
+
+  font-family: "Lato", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 500;
+
+  color: var(--color-text-blue);
+}
+
+/* Style section Initial */
+
+/* Style section tecnologic */
+
+/* Style section Works */
+
+/* Style section Footer */
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  bottom: 2rem;
+  width: 100%;
+  height: 7rem;
+
+  background-color: rgba(10, 10, 10, 0.6);
+}
+
+.footer span {
+  width: 70%;
+  text-align: center;
+}
+
+.footer a {
+  font-weight: 700;
+  color: var(--color-text-blue);
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
