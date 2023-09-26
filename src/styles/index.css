@@ -8,6 +8,7 @@
   --color-blue-white-background: #5dade2;
   --color-text-grafite: #2f2f2f;
   --color-text-blue: #438cbd;
+  --color-dark-blue-background: rgba(0, 0, 0, 0.5);
 
   --widt-center-screen: 70%;
 }
@@ -211,8 +212,76 @@ body {
 }
 
 /* Style section tecnologic */
+.tecnologic {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  min-height: 26rem;
+  background-color: var(--color-dark-blue-background);
+}
 
+.tecnologic h1 {
+  margin-top: 1rem;
+  color: whitesmoke;
+  font-size: 2.5rem;
+}
+
+.tec {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: var(--widt-center-screen);
+}
+
+.itensTecIcon {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+
+  margin: 2.1rem 0 2.1rem 0;
+}
+
+.itensTecIcon img {
+  width: 4rem;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.itensTecIcon img:hover {
+  transform: scale(1.2);
+}
+
+.tec span {
+  max-width: 40rem;
+  max-height: 5rem;
+  text-align: center;
+
+  font-family: "Lato";
+  font-size: 1.1rem;
+  font-weight: 700;
+  line-height: 25px; /* 113.636% */
+  letter-spacing: 3.3px;
+}
+
+.infoActive {
+  transform: scale(1.2);
+  border-bottom: 2px solid var(--color-text-grafite);
+}
+
+#jsInfo,
+#ghInfo,
+#javaInfo,
+#pyInfo,
+#reactInfo,
+#sqlInfo,
+#nodejsInfo {
+  display: none;
+}
 /* Style section Works */
+.works {
+  margin-bottom: 4rem;
+}
 
 /* Style section Footer */
 .footer {

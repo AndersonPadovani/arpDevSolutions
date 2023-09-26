@@ -13,7 +13,7 @@
     />
     <link rel="stylesheet" href="./src/styles/index.css" />
   </head>
-  <body>
+  <body onload="startPage()">
     <div class="container">
       <nav class="topMenu">
         <img
@@ -77,7 +77,68 @@
         />
       </section>
 
-      <section class="tecnologic"></section>
+      <section class="tecnologic">
+        <div class="tec">
+          <h1>&lt;Tecnologias /&gt;</h1>
+          <div class="itensTecIcon">
+            <img id="github" src="./src/img/icons/github.svg" alt="github" />
+            <img id="java" src="./src/img/icons/Java.svg" alt="java" />
+            <img
+              id="js"
+              src="./src/img/icons/JavaScript.svg"
+              alt="JavaScript"
+            />
+            <img id="python" src="./src/img/icons/Python.svg" alt="python" />
+            <img id="react" src="./src/img/icons/React.svg" alt="React" />
+            <img id="sql" src="./src/img/icons/SQL.svg" alt="sqlInfo" />
+            <img id="nodejs" src="./src/img/icons/nodejs.svg" alt="nodejs" />
+          </div>
+          <span id="jsInfo"
+            >JavaScript é uma linguagem fundamental para o desenvolvimento web,
+            permitindo interatividade dinâmica em páginas da web, melhorando a
+            experiência do usuário e viabilizando aplicativos web
+            modernos.</span
+          >
+          <span id="ghInfo"
+            >O GitHub é uma plataforma de hospedagem de código amplamente
+            utilizada por desenvolvedores. Ele permite o armazenamento,
+            colaboração, controle de versão e rastreamento de projetos de
+            software, facilitando o trabalho em equipe e a contribuição para
+            projetos de código aberto.</span
+          >
+          <span id="javaInfo"
+            >Java é uma linguagem de programação de alto nível amplamente usada
+            para desenvolver aplicativos diversos. Ela é conhecida por sua
+            portabilidade, segurança e capacidade de criar software escalável e
+            robusto.</span
+          >
+          <span id="pyInfo">
+            Python é uma linguagem de programação versátil e de alto nível. É
+            usada para desenvolver aplicativos, scripts e soluções de IA, com
+            sintaxe clara e ampla biblioteca padrão, tornando-a popular entre
+            desenvolvedores e cientistas de dados.</span
+          >
+          <span id="reactInfo"
+            >React é uma biblioteca JavaScript amplamente usada para desenvolver
+            interfaces de usuário interativas em aplicativos web. Ela permite
+            criar componentes reutilizáveis, facilitando o desenvolvimento de
+            interfaces dinâmicas e responsivas.</span
+          >
+          <span id="sqlInfo"
+            >SQL (Structured Query Language) é uma linguagem de programação
+            usada para gerenciar e manipular bancos de dados relacionais. Ela
+            permite a criação, consulta, atualização e exclusão de dados em
+            sistemas de gerenciamento de banco de dados.</span
+          >
+          <span id="nodejsInfo"
+            >O Node. js é um framework que permite a criação de APIs, aplicações
+            de chat e microsserviços. Possui facilidade em seu aprendizado e
+            utiliza o JavaScript para executar essa linguagem pelo lado do
+            servidor. Ele não é recomendado para ser utilizado em conjunto com
+            bancos de dados relacionais, tais como MySQL, PostgreSQL.</span
+          >
+        </div>
+      </section>
 
       <section class="works"></section>
 
@@ -92,7 +153,7 @@
         </span>
       </section>
 
-      <script type="module" src="./src/dist/index.js"></script>
+      <script src="./src/dist/index.js"></script>
     </div>
   </body>
 </html>
