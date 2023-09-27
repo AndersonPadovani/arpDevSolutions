@@ -135,7 +135,7 @@ body {
 }
 
 .btnCopy:active + .labelCopy {
-  display: flex;
+  /* display: flex; */
 }
 .btnCopy:active {
   background-color: rgba(10, 10, 10, 0.5);
@@ -144,7 +144,7 @@ body {
 .labelCopy {
   display: none;
   position: absolute;
-  right: -80px;
+  right: -90px;
   top: 10px;
   align-items: center;
   justify-content: center;

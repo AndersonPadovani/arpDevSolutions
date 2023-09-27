@@ -30,3 +30,12 @@ function selectTecIcon(id) {
         }
     });
 }
+const copy = document.querySelector(".labelCopy");
+document.querySelector("#btCopy")?.addEventListener("click", (event) => {
+    event.preventDefault();
+    copy.style.display = "flex";
+    navigator.clipboard.writeText(document.querySelector(".emailText").innerHTML);
+    setTimeout(() => {
+        copy.style.display = "none";
+    }, 2000);
+});
