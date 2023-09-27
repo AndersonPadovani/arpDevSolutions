@@ -1,6 +1,34 @@
 function startPage() {
   selectTecIcon("python");
 }
+const goTop = document.querySelector(".goTop") as HTMLInputElement;
+goTop.addEventListener("click", (e) => {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+  console.log("clicou");
+});
+
+document.querySelector("#cutbr")?.addEventListener("click", (e) => {
+  window.open("https://cutbr.site/", "_blanck");
+});
+
+document.querySelector("#login")?.addEventListener("click", (e) => {
+  window.open(
+    "https://andersonpadovani.com.br/v1/projetos/login.php",
+    "_blanck"
+  );
+});
+
+window.addEventListener("scroll", (e) => {
+  if (
+    document.body.scrollTop > 100 ||
+    document.documentElement.scrollTop > 20
+  ) {
+    goTop.style.display = "block";
+  } else {
+    goTop.style.display = "none";
+  }
+});
 
 const tecIcons = document.querySelector(".itensTecIcon");
 tecIcons?.addEventListener("click", (event) => {

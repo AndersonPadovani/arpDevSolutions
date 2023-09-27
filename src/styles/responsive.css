@@ -1,0 +1,93 @@
+@media only screen and (max-width: 600px) {
+  .topMenu {
+    display: flex;
+    flex-direction: column;
+  }
+  .topMenu img {
+    width: 90%;
+  }
+
+  .descriptInitial {
+    max-width: 100%;
+  }
+
+  .copy {
+    width: 100%;
+    transform: scale(0.8);
+  }
+
+  .logo {
+    display: none;
+  }
+
+  .tecnologic {
+    height: 110vh;
+  }
+
+  .itensTecIcon {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    overflow: auto;
+  }
+
+  .initial {
+    width: 90% !important;
+  }
+  .descriptInitial {
+    width: 100% !important;
+  }
+
+  .tec {
+    width: 100%;
+  }
+  .tecnologic h1 {
+    font-size: 2rem !important;
+  }
+
+  .works {
+    height: auto;
+    margin-top: 5rem;
+  }
+
+  .cardWork {
+    border: none;
+    border-top: 5px solid #438cbd;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    max-height: max-content;
+  }
+  .cardWork img {
+    width: 90%;
+  }
+
+  .cardTecs img {
+    max-width: 25px;
+  }
+
+  .footer {
+    margin-top: 20px;
+    height: max-content;
+  }
+
+  .footer span {
+    min-width: 90%;
+  }
+
+  .sideCard {
+    align-items: center;
+  }
+  .cardInfo {
+    text-align: center;
+  }
+
+  .btnCopy {
+    position: relative;
+  }
+  .labelCopy {
+    right: 0px !important;
+    top: -40px !important;
+  }
+}
