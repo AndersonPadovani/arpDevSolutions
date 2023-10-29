@@ -5,7 +5,6 @@ const goTop = document.querySelector(".goTop") as HTMLInputElement;
 goTop.addEventListener("click", (e) => {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
-  console.log("clicou");
 });
 
 document.querySelector("#cutbr")?.addEventListener("click", (e) => {
