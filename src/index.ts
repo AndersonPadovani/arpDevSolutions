@@ -40,13 +40,23 @@ const reposGit = async () => {
 
     WorkerInfo({
       infoWorker: iten.description,
-      srcImgWorke: !iten.private ? "emconstrução" : iten.name,
+      // srcImgWorke: !iten.private ? "emconstrução" : iten.name,
+      srcImgWorke: (await thumbsExists(iten.name)) ? iten.name : "emconstrução",
       srcWorkerTech: languages,
       titleWorke: iten.name,
       repoUrl: iten.html_url,
     });
   });
 };
+
+async function thumbsExists(imagePath: string) {
+  try {
+    const response = await fetch(`./src/img/thumbs/${imagePath}.png`);
+    return response.ok; // Retorna true se a imagem foi carregada com sucesso
+  } catch (error) {
+    return false; // Retorna false se houve erro no carregamento
+  }
+}
 
 async function getLanguageNames(languageUrl: string): Promise<string[]> {
   try {
