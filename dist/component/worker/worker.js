@@ -1,4 +1,4 @@
-const WorkerInfo = ({ srcImgWorke, srcWorkerTech, titleWorke, infoWorker, }) => {
+const WorkerInfo = ({ srcImgWorke, srcWorkerTech, titleWorke, infoWorker, repoUrl, }) => {
     const cardWork = document.createElement("div");
     cardWork.className = "cardWork";
     const imgWork = document.createElement("img");
@@ -17,6 +17,9 @@ const WorkerInfo = ({ srcImgWorke, srcWorkerTech, titleWorke, infoWorker, }) => 
     const inputWork = document.createElement("input");
     inputWork.value = "VER";
     inputWork.type = "button";
+    inputWork.addEventListener("click", () => {
+        window.open(repoUrl, "_blank");
+    });
     cardWork.appendChild(imgWork);
     cardWork.appendChild(sideCard);
     sideCard.appendChild(workeTitle);

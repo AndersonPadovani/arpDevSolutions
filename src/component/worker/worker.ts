@@ -3,6 +3,7 @@ type WorkerInfoType = {
   titleWorke: string;
   infoWorker: string;
   srcWorkerTech: string[];
+  repoUrl: string;
 };
 
 const WorkerInfo = ({
@@ -10,6 +11,7 @@ const WorkerInfo = ({
   srcWorkerTech,
   titleWorke,
   infoWorker,
+  repoUrl,
 }: WorkerInfoType) => {
   const cardWork = document.createElement("div");
   cardWork.className = "cardWork";
@@ -36,6 +38,9 @@ const WorkerInfo = ({
   const inputWork = document.createElement("input");
   inputWork.value = "VER";
   inputWork.type = "button";
+  inputWork.addEventListener("click", () => {
+    window.open(repoUrl, "_blank");
+  });
 
   cardWork.appendChild(imgWork);
   cardWork.appendChild(sideCard);

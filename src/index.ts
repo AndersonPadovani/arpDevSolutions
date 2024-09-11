@@ -43,20 +43,29 @@ const reposGit = async () => {
       srcImgWorke: !iten.private ? "emconstrução" : iten.name,
       srcWorkerTech: languages,
       titleWorke: iten.name,
+      repoUrl: iten.html_url,
     });
   });
 };
 
 async function getLanguageNames(languageUrl: string): Promise<string[]> {
-  const data = await fetch(languageUrl);
+  try {
+    const response = await fetch(languageUrl);
 
-  if (!data) {
+    if (!response.ok) {
+      throw new Error("Network response was not ok");
+    }
+
+    const getLanguages = await response.json();
+
+    let languages = Object.keys(getLanguages);
+
+    languages.unshift("git");
+
+    return languages;
+  } catch (error) {
     return [""];
   }
-
-  const languages = await data.json();
-
-  return [languages];
 }
 
 const goTop = document.querySelector(".goTop") as HTMLInputElement;
