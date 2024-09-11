@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="./src/styles/responsive.css" />
     <link rel="stylesheet" href="./src/styles/index.css" />
   </head>
-  <body onload="startPage()">
+  <body>
     <div class="container">
       <nav class="topMenu">
         <img
@@ -148,50 +148,8 @@
       </section>
 
       <section id="secWorks" class="works">
-        <div class="cardWork">
-          <img src="./src/img/cutbr.png" alt="Pagina cutbr.site" />
-          <div class="sideCard">
-            <h2>CutBr</h2>
-            <span class="cardInfo"
-              >A página "CutBR" é uma plataforma criada com ReactJS, SQL, CSS e
-              HTML5, com o objetivo de encurtar links de forma eficiente.
-              Utilizando uma API para o armazenamento de links, ela simplifica a
-              tarefa de compartilhar URLs longas, tornando a navegação na web
-              mais prática e rápida.</span
-            >
-            <div class="cardBottom">
-              <div class="cardTecs">
-                <img src="./src/img/icons/git.svg" alt="IconTec" />
-                <img src="./src/img/icons/React.svg" alt="IconTec" />
-                <img src="./src/img/icons/css3.svg" alt="IconTec" />
-                <img src="./src/img/icons/html5.svg" alt="IconTec" />
-              </div>
-              <input id="cutbr" type="button" value="VER" />
-            </div>
-          </div>
-        </div>
-
-        <div class="cardWork">
-          <img src="./src/img/login.png" alt="Pagina cutbr.site" />
-          <div class="sideCard">
-            <h2>Login Page</h2>
-            <span class="cardInfo"
-              >A "Login Page" é uma página desenvolvida com JavaScript, SQL, CSS
-              e HTML5, projetada para apresentar uma interface de login. Ela
-              interage com uma API em PHP para armazenar e validar usuários,
-              proporcionando um ambiente seguro e intuitivo para o acesso a
-              serviços online.</span
-            >
-            <div class="cardBottom">
-              <div class="cardTecs">
-                <img src="./src/img/icons/git.svg" alt="IconTec" />
-                <img src="./src/img/icons/JavaScript.svg" alt="IconTec" />
-                <img src="./src/img/icons/css3.svg" alt="IconTec" />
-                <img src="./src/img/icons/html5.svg" alt="IconTec" />
-              </div>
-              <input id="login" type="button" value="VER" />
-            </div>
-          </div>
+        <div id="errorGit" class="errorGit">
+          Desculpa não conseguimos buscar nenhum repositorio no github!
         </div>
       </section>
 
@@ -212,7 +170,7 @@
         <img src="./src//img/icons/goTop.svg" alt="GoToTop" />
       </div>
 
-      <script src="./src/dist/index.js"></script>
+      <script type="module" src="./dist/index.js"></script>
     </div>
   </body>
 </html>

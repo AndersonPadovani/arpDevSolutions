@@ -1,6 +1,64 @@
-function startPage() {
+import WorkerInfo from "./component/worker/worker.js";
+
+window.onload = () => {
   selectTecIcon("python");
+  reposGit();
+};
+
+function setErrorGit() {
+  const error = document.getElementById("errorGit")!;
+  error.style.display = "block";
 }
+
+type RepoGitType = {
+  name: string;
+  html_url: string;
+  stargazers_count: number;
+  // language: string;
+  private: boolean;
+  description: string;
+  languages_url: string;
+};
+const reposGit = async () => {
+  const apiGitUrl = "https://api.github.com/users/AndersonPadovani/repos";
+
+  const data = await fetch(apiGitUrl);
+
+  const repos = await data.json();
+
+  if (!repos || data.status != 200) {
+    setErrorGit();
+    return 1;
+  }
+
+  repos.map(async (iten: RepoGitType) => {
+    if (iten.stargazers_count <= 0) {
+      return;
+    }
+
+    const languages = await getLanguageNames(iten.languages_url);
+
+    WorkerInfo({
+      infoWorker: iten.description,
+      srcImgWorke: !iten.private ? "emconstrução" : iten.name,
+      srcWorkerTech: languages,
+      titleWorke: iten.name,
+    });
+  });
+};
+
+async function getLanguageNames(languageUrl: string): Promise<string[]> {
+  const data = await fetch(languageUrl);
+
+  if (!data) {
+    return [""];
+  }
+
+  const languages = await data.json();
+
+  return [languages];
+}
+
 const goTop = document.querySelector(".goTop") as HTMLInputElement;
 goTop.addEventListener("click", (e) => {
   document.body.scrollTop = 0;

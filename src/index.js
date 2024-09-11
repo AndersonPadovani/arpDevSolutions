@@ -1,12 +1,29 @@
-"use strict";
-function startPage() {
+import WorkerInfo from "./component/worker/worker";
+window.onload = () => {
     selectTecIcon("python");
-}
+    reposGit();
+};
+const reposGit = async () => {
+    const apiGitUrl = "https://api.github.com/users/AndersonPadovani/repos";
+    const data = await fetch(apiGitUrl);
+    const repos = await data.json();
+    if (!repos) {
+        return;
+    }
+    repos.map((iten) => {
+        console.log(iten.html_url);
+        WorkerInfo({
+            infoWorker: "asd",
+            srcImgWorke: "",
+            srcWorkerTech: ["asd", "asd"],
+            titleWorke: "",
+        });
+    });
+};
 const goTop = document.querySelector(".goTop");
 goTop.addEventListener("click", (e) => {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
-    console.log("clicou");
 });
 document.querySelector("#cutbr")?.addEventListener("click", (e) => {
     window.open("https://cutbr.site/", "_blanck");
@@ -60,3 +77,4 @@ document.querySelector("#btCopy")?.addEventListener("click", (event) => {
         copy.style.display = "none";
     }, 2000);
 });
+//# sourceMappingURL=index.js.map

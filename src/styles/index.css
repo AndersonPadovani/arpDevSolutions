@@ -34,6 +34,13 @@ body {
   width: 100%;
 }
 
+.errorGit {
+  display: none;
+  color: rgb(202, 59, 59);
+  font-size: x-large;
+  font-weight: 700;
+}
+
 /* style Menu bar */
 .topMenu {
   width: var(--widt-center-screen);
@@ -287,6 +294,7 @@ body {
 .works {
   display: flex;
   flex-direction: column;
+  padding-top: 4rem;
   gap: 4rem;
   align-items: center;
   justify-content: center;
