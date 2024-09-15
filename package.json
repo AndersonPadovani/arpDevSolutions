@@ -4,12 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "tsc": "npx tsc --watch"
+    "tsc": "npx tsc --watch",
+    "css": "npx tailwindcss -i ./src/css/global.css -o ./src/css/output.css --watch"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "tailwindcss": "^3.4.11",
     "typescript": "^5.2.2"
   },
   "dependencies": {

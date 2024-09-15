@@ -11,30 +11,55 @@
       href="https://fonts.googleapis.com/css2?family=Lato&family=Roboto:wght@400;500;700&family=Space+Grotesk:wght@700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./src/styles/card.css" />
-    <link rel="stylesheet" href="./src/styles/responsive.css" />
-    <link rel="stylesheet" href="./src/styles/index.css" />
+    <link href="./src/css/output.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./src/css/card.css" />
+    <link rel="stylesheet" href="./src/css/responsive.css" />
+    <link rel="stylesheet" href="./src/css/index.css" />
   </head>
-  <body>
-    <div class="container">
-      <nav class="topMenu">
+  <body class="bg-color-background">
+    <main class="flex flex-col items-center w-full">
+      <nav class="flex w-2/3 h-28 items-center justify-between">
         <img
           src="./src/img/Logo-ArpDevSolution.svg"
           alt="ARP Dev Solutions Logo"
         />
-        <ul>
-          <li><a href="#secHome">HOME</a></li>
-          <li><a href="#secTecnologic">TECNOLOGIAS</a></li>
-          <li><a href="#secWorks">WORKS</a></li>
+        <ul class="flex flex-row gap-9">
+          <li class="list-none text-xl font-semibold">
+            <a href="#secHome" class="text-color-text">HOME</a>
+          </li>
+          <li class="list-none text-xl font-semibold">
+            <a href="#secTecnologic" class="text-color-text">TECNOLOGIAS</a>
+          </li>
+          <li class="list-none text-xl font-semibold">
+            <a href="#secWorks" class="text-color-text">WORKS</a>
+          </li>
         </ul>
       </nav>
 
-      <section id="secHome" class="initial">
-        <div class="descriptInitial">
+      <section
+        id="secHome"
+        class="flex justify-between items-center w-2/3 min-h-screen"
+      >
+        <div class="flex flex-col items-start justify-around h-auto gap-12">
           <div>
-            <h4>DESENVOLVEDOR FULL-STACK</h4>
-            <h1>ANDERSON RAMOS PADOVANI</h1>
-            <p>
+            <h4 class="font-semibold text-sm">DESENVOLVEDOR FULL-STACK</h4>
+            <div class="wrapper">
+              <svg class="w-[530px]">
+                <text
+                  x="50%"
+                  y="50%"
+                  dy=".35em"
+                  text-anchor="middle"
+                  class="text-4xl font-black"
+                >
+                  Anderson Ramos Padovani
+                </text>
+              </svg>
+            </div>
+            <!-- <h1 class="text-color-text text-4xl font-bold mb-5">
+              ANDERSON RAMOS PADOVANI
+            </h1> -->
+            <p class="font-semibold">
               ARP Dev Solutions é líder em desenvolvimento Full Stack. Nossa
               equipe experiente transforma ideias em soluções digitais de alta
               qualidade, impulsionando o sucesso de nossos clientes com inovação
@@ -42,35 +67,45 @@
             </p>
           </div>
           <div class="copy">
-            <div class="emailCopy">
-              <button class="btnEmail backgroundIMG"></button>
-              <span class="emailText"> andersonpadovani@protonmail.com </span>
+            <div class="flex relative">
+              <button
+                class="w-14 h-14 bg-no-repeat bg-center bg-cover bg-[url('../img/icons/email.png')] rounded-l-md border border-black"
+              ></button>
+              <span
+                class="flex justify-center items-center w-80 h-14 bg-[rgba(10,10,10,0.3)] border border-black font-bold text-lg"
+              >
+                andersonpadovani@protonmail.com
+              </span>
               <button
                 id="btCopy"
-                class="btnCopy backgroundIMG cursorPointerHover"
+                class="w-14 h-14 bg-no-repeat bg-center bg-cover bg-[url('../img/icons/copy.png')] rounded-r-md border border-black cursor-pointer"
               ></button>
-              <label class="labelCopy" for="btCopy">COPIADO</label>
+              <label
+                class="hidden absolute right-[-90px] top-2 flex items-center justify-center text-smoke font-bold bg-green-600 rounded-lg px-3 py-1"
+                for="btCopy"
+                >COPIADO</label
+              >
             </div>
 
-            <div class="socialIcons">
+            <div class="socialIcons flex gap-4 mt-4">
               <a
                 href="https://www.linkedin.com/in/anderson-padovani-047266180/"
-                class="socialButton linkedinIcon cursorPointerHover"
+                class="w-12 h-12 bg-[url('../img/icons/linkedin.svg')] bg-cover bg-center cursor-pointer hover:scale-110 transition-transform"
                 target="_blank"
               ></a>
               <a
                 href="https://github.com/AndersonPadovani"
-                class="socialButton gitHubIcon cursorPointerHover"
+                class="w-12 h-12 bg-[url('../img/icons/github.svg')] bg-cover bg-center cursor-pointer hover:scale-110 transition-transform"
                 target="_blank"
               ></a>
               <a
                 href="https://www.facebook.com/?locale=pt_BR"
-                class="socialButton facebookIcon cursorPointerHover"
+                class="w-12 h-12 bg-[url('../img/icons/facebook.svg')] bg-cover bg-center cursor-pointer hover:scale-110 transition-transform"
                 target="_blank"
               ></a>
               <a
                 href="https://api.whatsapp.com/send/?phone=5545999530893"
-                class="socialButton whatsappIcon cursorPointerHover"
+                class="w-12 h-12 bg-[url('../img/icons/whatsapp.svg')] bg-cover bg-center cursor-pointer hover:scale-110 transition-transform"
                 target="_blank"
               ></a>
             </div>
@@ -78,99 +113,157 @@
         </div>
 
         <img
-          class="logo"
+          class="max-h-[28rem]"
           src="./src/img/developerAction.svg"
           alt="imagen ilustrativa"
         />
       </section>
 
-      <section id="secTecnologic" class="tecnologic">
-        <div class="tec">
-          <h1>&lt;Tecnologias /&gt;</h1>
-          <div class="itensTecIcon">
-            <img id="github" src="./src/img/icons/github.svg" alt="github" />
-            <img id="java" src="./src/img/icons/Java.svg" alt="java" />
+      <section
+        id="secTecnologic"
+        class="tecnologic flex flex-col items-center w-full min-h-[30rem] bg-dark-blue"
+      >
+        <div class="tec flex flex-col items-center h-full w-full">
+          <h1
+            class="mt-4 text-4xl font-semibold text-whitesmoke text-slate-300"
+          >
+            &lt;Tecnologias /&gt;
+          </h1>
+          <div
+            id="infoIcon"
+            class="flex flex-row w-full h-max items-center justify-center gap-8 my-10"
+          >
             <img
-              id="js"
-              src="./src/img/icons/JavaScript.svg"
-              alt="JavaScript"
+              class="w-16 cursor-pointer transition-transform transform hover:scale-110"
+              id="GITHUB"
+              src="./src/img/icons/github.svg"
+              alt="GITHUB"
             />
-            <img id="python" src="./src/img/icons/Python.svg" alt="python" />
-            <img id="react" src="./src/img/icons/React.svg" alt="React" />
-            <img id="sql" src="./src/img/icons/SQL.svg" alt="sqlInfo" />
-            <img id="nodejs" src="./src/img/icons/nodejs.svg" alt="nodejs" />
+            <img
+              class="w-16 cursor-pointer transition-transform transform hover:scale-110"
+              id="JAVA"
+              src="./src/img/icons/Java.svg"
+              alt="JAVA"
+            />
+            <img
+              class="w-16 cursor-pointer transition-transform transform hover:scale-110"
+              id="JAVASCRIPT"
+              src="./src/img/icons/JavaScript.svg"
+              alt="JAVASCRIPT"
+            />
+            <img
+              class="infoActive w-16 cursor-pointer transition-transform transform hover:scale-110"
+              id="PYTHON"
+              src="./src/img/icons/Python.svg"
+              alt="PYTHON"
+            />
+            <img
+              class="w-16 cursor-pointer transition-transform transform hover:scale-110"
+              id="REACT"
+              src="./src/img/icons/React.svg"
+              alt="REACT"
+            />
+            <img
+              class="w-16 cursor-pointer transition-transform transform hover:scale-110"
+              id="SQL"
+              src="./src/img/icons/SQL.svg"
+              alt="SQL"
+            />
+            <img
+              class="w-16 cursor-pointer transition-transform transform hover:scale-110"
+              id="NODEJS"
+              src="./src/img/icons/nodejs.svg"
+              alt="NODEJS"
+            />
           </div>
-          <span id="jsInfo"
-            >JavaScript é uma linguagem fundamental para o desenvolvimento web,
-            permitindo interatividade dinâmica em páginas da web, melhorando a
-            experiência do usuário e viabilizando aplicativos web
-            modernos.</span
-          >
-          <span id="ghInfo"
-            >O GitHub é uma plataforma de hospedagem de código amplamente
-            utilizada por desenvolvedores. Ele permite o armazenamento,
-            colaboração, controle de versão e rastreamento de projetos de
-            software, facilitando o trabalho em equipe e a contribuição para
-            projetos de código aberto.</span
-          >
-          <span id="javaInfo"
-            >Java é uma linguagem de programação de alto nível amplamente usada
-            para desenvolver aplicativos diversos. Ela é conhecida por sua
-            portabilidade, segurança e capacidade de criar software escalável e
-            robusto.</span
-          >
-          <span id="pyInfo">
-            Python é uma linguagem de programação versátil e de alto nível. É
-            usada para desenvolver aplicativos, scripts e soluções de IA, com
-            sintaxe clara e ampla biblioteca padrão, tornando-a popular entre
-            desenvolvedores e cientistas de dados.</span
-          >
-          <span id="reactInfo"
-            >React é uma biblioteca JavaScript amplamente usada para desenvolver
-            interfaces de usuário interativas em aplicativos web. Ela permite
-            criar componentes reutilizáveis, facilitando o desenvolvimento de
-            interfaces dinâmicas e responsivas.</span
-          >
-          <span id="sqlInfo"
-            >SQL (Structured Query Language) é uma linguagem de programação
-            usada para gerenciar e manipular bancos de dados relacionais. Ela
-            permite a criação, consulta, atualização e exclusão de dados em
-            sistemas de gerenciamento de banco de dados.</span
-          >
-          <span id="nodejsInfo"
-            >O Node. js é um framework que permite a criação de APIs, aplicações
-            de chat e microsserviços. Possui facilidade em seu aprendizado e
-            utiliza o JavaScript para executar essa linguagem pelo lado do
-            servidor. Ele é recomendado para ser utilizado em conjunto com
-            bancos de dados relacionais, tais como MySQL, PostgreSQL.</span
-          >
+
+          <div id="infoText" class="w-2/3 text-center font-semibold">
+            <span id="javascript" class="hidden">
+              JavaScript é uma linguagem fundamental para o desenvolvimento web,
+              permitindo interatividade dinâmica em páginas da web, melhorando a
+              experiência do usuário e viabilizando aplicativos web modernos.
+            </span>
+            <span id="github" class="hidden">
+              O GitHub é uma plataforma de hospedagem de código amplamente
+              utilizada por desenvolvedores. Ele permite o armazenamento,
+              colaboração, controle de versão e rastreamento de projetos de
+              software, facilitando o trabalho em equipe e a contribuição para
+              projetos de código aberto.
+            </span>
+            <span id="java" class="hidden">
+              Java é uma linguagem de programação de alto nível amplamente usada
+              para desenvolver aplicativos diversos. Ela é conhecida por sua
+              portabilidade, segurança e capacidade de criar software escalável
+              e robusto.
+            </span>
+            <span id="python">
+              Python é uma linguagem de programação versátil e de alto nível. É
+              usada para desenvolver aplicativos, scripts e soluções de IA, com
+              sintaxe clara e ampla biblioteca padrão, tornando-a popular entre
+              desenvolvedores e cientistas de dados.
+            </span>
+            <span id="react" class="hidden">
+              React é uma biblioteca JavaScript amplamente usada para
+              desenvolver interfaces de usuário interativas em aplicativos web.
+              Ela permite criar componentes reutilizáveis, facilitando o
+              desenvolvimento de interfaces dinâmicas e responsivas.
+            </span>
+            <span id="sql" class="hidden">
+              SQL (Structured Query Language) é uma linguagem de programação
+              usada para gerenciar e manipular bancos de dados relacionais. Ela
+              permite a criação, consulta, atualização e exclusão de dados em
+              sistemas de gerenciamento de banco de dados.
+            </span>
+            <span id="nodejs" class="hidden">
+              O Node.js é um framework que permite a criação de APIs, aplicações
+              de chat e microsserviços. Possui facilidade em seu aprendizado e
+              utiliza o JavaScript para executar essa linguagem pelo lado do
+              servidor. Ele é recomendado para ser utilizado em conjunto com
+              bancos de dados relacionais, tais como MySQL, PostgreSQL.
+            </span>
+          </div>
         </div>
       </section>
 
-      <section id="secWorks" class="works">
-        <div id="errorGit" class="errorGit">
-          Desculpa não conseguimos buscar nenhum repositorio no github!
+      <section
+        id="secWorks"
+        class="works flex flex-col items-center justify-center min-h-screen w-full py-16 gap-16"
+      >
+        <div id="errorGit" class="hidden text-red-500 text-xl font-bold">
+          Desculpa, não conseguimos buscar nenhum repositório no GitHub!
         </div>
       </section>
 
-      <section class="footer">
-        <span
-          ><strong>© 2023 ARP Dev Solutions CNPJ: 52.322.672/0001-17</strong>.
-          Todos os direitos reservados. Explore nossa página os Trabalhos
-          Realizados, para ver exemplos de projetos de sucesso que demonstram
+      <footer
+        class="footer flex items-center justify-center w-full h-28 bg-[rgba(10,10,10,0.6)] mb-4"
+      >
+        <span class="text-center w-[90%]">
+          <strong>© 2023 ARP Dev Solutions CNPJ: 52.322.672/0001-17</strong>.
+          Todos os direitos reservados. Explore nossa página Trabalhos
+          Realizados para ver exemplos de projetos de sucesso que demonstram
           nossa excelência em desenvolvimento e inovação.
           <strong
-            ><a href="https://github.com/AndersonPadovani">GITHUB</a></strong
+            ><a
+              href="https://github.com/AndersonPadovani"
+              class="text-color-text hover:underline"
+              >GITHUB</a
+            ></strong
           >
         </span>
-      </section>
+      </footer>
 
-      <div class="goTop cursorPointerHover">
-        <strong> GoTop </strong>
-        <img src="./src//img/icons/goTop.svg" alt="GoToTop" />
+      <div
+        class="fixed bottom-5 right-5 flex items-center justify-center cursor-pointer hover:underline"
+      >
+        <strong>GoTop</strong>
+        <img
+          class="w-9 h-9 bg-gray-300 rounded-full ml-2"
+          src="./src/img/icons/goTop.svg"
+          alt="GoToTop"
+        />
       </div>
 
       <script type="module" src="./dist/index.js"></script>
-    </div>
+    </main>
   </body>
 </html>

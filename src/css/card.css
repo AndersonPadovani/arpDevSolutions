@@ -30,6 +30,10 @@
   height: 100%;
   overflow: auto;
 
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #d4d4d4;
+
   font-weight: 500;
 }
 
@@ -39,10 +43,11 @@
 
 .sideCard h2 {
   position: relative;
-  /* margin-bottom: 2px; */
+  font-weight: 800;
+  font-size: 1.2rem;
 
   top: 0;
-  color: var(--color-text-white);
+  color: whitesmoke;
 }
 
 .cardBottom {
