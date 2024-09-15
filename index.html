@@ -13,6 +13,11 @@
     />
     <link href="./src/css/output.css" rel="stylesheet" />
     <link rel="stylesheet" href="./src/css/card.css" />
+    <link
+      rel="stylesheet"
+      href="./src//component//progresSkills/skillProgress.css"
+    />
+    <link rel="stylesheet" href="./src/css/animateName.css" />
     <link rel="stylesheet" href="./src/css/responsive.css" />
     <link rel="stylesheet" href="./src/css/index.css" />
   </head>
@@ -44,11 +49,11 @@
           <div>
             <h4 class="font-semibold text-sm">DESENVOLVEDOR FULL-STACK</h4>
             <div class="wrapper">
-              <svg class="w-[530px]">
+              <svg class="w-full h-full">
                 <text
-                  x="50%"
-                  y="50%"
-                  dy=".35em"
+                  x="35%"
+                  y="30%"
+                  dy="2rem"
                   text-anchor="middle"
                   class="text-4xl font-black"
                 >
@@ -221,6 +226,16 @@
               servidor. Ele é recomendado para ser utilizado em conjunto com
               bancos de dados relacionais, tais como MySQL, PostgreSQL.
             </span>
+          </div>
+
+          <div class="flex flex-col gap-14 mt-20 w-2/3 items-center">
+            <h1
+              class="mt-4 text-4xl font-semibold text-whitesmoke text-slate-300"
+            >
+              &lt;Skills Levels /&gt;
+            </h1>
+            <div id="skills" class="flex flex-wrap gap-5"></div>
+            <!-- progress skill list -->
           </div>
         </div>
       </section>

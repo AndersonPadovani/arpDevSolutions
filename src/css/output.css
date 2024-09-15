@@ -776,6 +776,10 @@ video {
   margin-top: 0.5rem;
 }
 
+.mt-20 {
+  margin-top: 5rem;
+}
+
 .mt-4 {
   margin-top: 1rem;
 }
@@ -954,10 +958,6 @@ video {
 
 .w-9 {
   width: 2.25rem;
-}
-
-.w-\[530px\] {
-  width: 530px;
 }
 
 .w-\[90\%\] {
@@ -1510,12 +1510,20 @@ video {
   gap: 3rem;
 }
 
+.gap-14 {
+  gap: 3.5rem;
+}
+
 .gap-16 {
   gap: 4rem;
 }
 
 .gap-4 {
   gap: 1rem;
+}
+
+.gap-5 {
+  gap: 1.25rem;
 }
 
 .gap-8 {
@@ -2757,50 +2765,6 @@ video {
 .infoActive {
   transform: scale(1.2);
   border-bottom: 2px solid var(--color-text-grafite);
-}
-
-svg {
-  font-family: "Russo One", sans-serif;
-}
-
-svg text {
-  animation: stroke 5s;
-  stroke-width: 2;
-  stroke: #365fa0;
-  fill: rgb(69, 106, 167);
-}
-
-@keyframes stroke {
-  0% {
-    fill: rgba(72, 138, 204, 0);
-    stroke: rgba(54, 95, 160, 1);
-    stroke-dashoffset: 25%;
-    stroke-dasharray: 0 50%;
-    stroke-width: 2;
-  }
-
-  70% {
-    fill: rgba(72, 138, 204, 0);
-    stroke: rgba(54, 95, 160, 1);
-  }
-
-  80% {
-    fill: rgba(72, 138, 204, 0);
-    stroke: rgba(54, 95, 160, 1);
-    stroke-width: 3;
-  }
-
-  100% {
-    fill: rgba(72, 138, 204, 1);
-    stroke: rgba(54, 95, 160, 0);
-    stroke-dashoffset: -25%;
-    stroke-dasharray: 50% 0;
-    stroke-width: 0;
-  }
-}
-
-.wrapper {
-  background-color: none;
 }
 
 @media (min-width: 640px) {

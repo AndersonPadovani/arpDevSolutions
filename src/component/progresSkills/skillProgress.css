@@ -1,0 +1,70 @@
+/* progressSkill.css */
+
+.skillItem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 15rem; /* equivalente a max-w-40 */
+  margin-bottom: 1rem; /* Espaçamento entre os itens */
+  gap: 0.5rem;
+  flex: 1 1 1;
+}
+
+.reverseProgress {
+  flex-direction: row-reverse;
+}
+
+.skillItem img {
+  width: 4rem; /* equivalente a w-16 */
+}
+
+.skillItem div {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.skillItem span {
+  text-align: center;
+  color: whitesmoke;
+  font-weight: 600;
+  font-size: 1rem; /* Tamanho da fonte */
+  margin-bottom: 0.5rem; /* Espaço entre o título e a barra de progresso */
+}
+
+.progressBar {
+  width: 100%;
+  height: 0.6rem; /* Altura da barra de progresso */
+  border: 1px solid #438cbd;
+  border-radius: 1rem;
+  overflow: hidden;
+  transition: all 1s;
+}
+
+.progressBar {
+  /* Altera a cor do background no Firefox e navegadores da Microsoft */
+  background: #92c5e7;
+
+  /* É necessário alterar o valor para none */
+  -webkit-appearance: none;
+}
+
+/* Altera a cor de fundo em navegadores com webkit (Chrome, Safari etc) */
+::-webkit-progress-value {
+  background-color: #92c5e7;
+}
+
+/* Altera a cor da barra em navegadores com webkit (Chrome, Safari etc) */
+::-webkit-progress-bar {
+  background-color: #438cbd;
+}
+
+/* Altera a cor da barra em navegadores com moz (Firefox) */
+::-moz-progress-bar {
+  background-color: #92c5e7;
+}
+
+/* Altera a cor da barra em navegadores da Microsoft (IE e Edge) */
+::-ms-fill {
+  background-color: #438cbd;
+}
