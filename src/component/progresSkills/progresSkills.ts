@@ -28,19 +28,26 @@ const ProgressSkill = ({ progress, title }: ProgressSkillType) => {
   tooltip.style.opacity = "0";
   tooltip.innerHTML = `Dominio de ${progress}%`;
 
-  //Função tooltip on mouse enter skill
-  divProgress.addEventListener("mouseenter", (element) => {
-    //Create delay to show tooltip
-    setTimeout(() => {
-      tooltip.style.opacity = "100";
+  let tooltipTimeout: ReturnType<typeof setTimeout> | null = null;
+
+  // Função tooltip on mouse enter skill
+  divProgress.addEventListener("mouseenter", () => {
+    // Cria delay para mostrar o tooltip
+    tooltipTimeout = setTimeout(() => {
+      tooltip.style.opacity = "1";
     }, 1000);
   });
 
-  //Função tooltip on mouse leave skill
-  divProgress.addEventListener(
-    "mouseleave",
-    (element) => (tooltip.style.opacity = "0")
-  );
+  // Função tooltip on mouse leave skill
+  divProgress.addEventListener("mouseleave", () => {
+    // Se o mouse sair antes do tempo do delay, cancela o timeout
+    if (tooltipTimeout) {
+      clearTimeout(tooltipTimeout);
+      tooltipTimeout = null;
+    }
+    // Esconde o tooltip imediatamente
+    tooltip.style.opacity = "0";
+  });
 
   divContent.appendChild(spanTitle);
   divContent.appendChild(progressBar);

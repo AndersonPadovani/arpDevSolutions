@@ -4,8 +4,8 @@ const GetReposGit = async () => {
         const error = document.getElementById("errorGit");
         isError ? error.classList.remove("hidden") : error.classList.add("hidden");
     }
-    // const apiGitUrl = "https://api.github.com/users/AndersonPadovani/repos";
-    const apiGitUrl = "https://api.github.com/users/AndersonPadovani/repo"; //Dev Mode, to limit api git error
+    const apiGitUrl = "https://api.github.com/users/AndersonPadovani/repos";
+    // const apiGitUrl = "https://api.github.com/users/AndersonPadovani/repo"; //Dev Mode, to limit api git error
     const data = await fetch(apiGitUrl);
     const repos = await data.json();
     if (!repos || data.status != 200) {
