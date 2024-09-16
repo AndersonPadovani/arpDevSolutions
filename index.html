@@ -23,7 +23,7 @@
   </head>
   <body class="bg-color-background">
     <main class="flex flex-col items-center w-full">
-      <nav class="flex w-2/3 h-28 items-center justify-between">
+      <nav id="top" class="flex w-2/3 h-28 items-center justify-between">
         <img
           src="./src/img/Logo-ArpDevSolution.svg"
           alt="ARP Dev Solutions Logo"
@@ -267,16 +267,18 @@
         </span>
       </footer>
 
-      <div
-        class="fixed bottom-5 right-5 flex items-center justify-center cursor-pointer hover:underline"
+      <a
+        id="btnGoTop"
+        href="#top"
+        class="flex items-center fixed bottom-5 right-5 font-bold text-xl text-slate-200 hover:scale-110 transition-all"
       >
-        <strong>GoTop</strong>
+        GoTop
         <img
-          class="w-9 h-9 bg-gray-300 rounded-full ml-2"
+          class="w-9 h-9 p-1 bg-color-text rounded-full ml-2"
           src="./src/img/icons/goTop.svg"
           alt="GoToTop"
         />
-      </div>
+      </a>
 
       <script type="module" src="./dist/index.js"></script>
     </main>

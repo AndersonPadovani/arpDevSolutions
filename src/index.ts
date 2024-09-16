@@ -1,3 +1,4 @@
+import GoTop from "./utils/btnGoTop.js";
 import CopyEmail from "./utils/copyEmail.js";
 import IconTechSelect from "./utils/iconTechSelect.js";
 import GetReposGit from "./utils/repoGit.js";
@@ -8,4 +9,5 @@ window.onload = () => {
   GetReposGit(); //function populate card whit repos git
   CopyEmail(); //function buttom copy emial
   SkilsItems(); //function add skills levels
+  GoTop(); //function to add event buton GoTop
 };

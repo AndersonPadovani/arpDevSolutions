@@ -6,15 +6,17 @@ type SkillsType = {
 };
 
 const skills: [string, number][] = [
-  ["Java Script", 75],
-  ["SQL", 80],
-  ["Html 5", 90],
-  ["Git", 80],
-  ["React Native", 70],
-  ["Python", 65],
-  ["TypeScript", 75],
-  ["Css 3", 90],
-  ["Prisma", 80],
+  ["Java Script", 95],
+  ["SQL", 90],
+  ["Html 5", 95],
+  ["Git", 85],
+  ["React Native", 80],
+  ["Python", 70],
+  ["TypeScript", 80],
+  ["Css 3", 95],
+  ["Prisma", 95],
+  ["NextJs", 90],
+  ["Docker", 85],
 ];
 
 const SkilsItems = () => {
