@@ -2,12 +2,44 @@
 
 .skillItem {
   display: flex;
+  position: relative;
   justify-content: center;
   align-items: center;
   min-width: 15rem; /* equivalente a max-w-40 */
   margin-bottom: 1rem; /* Espaçamento entre os itens */
   gap: 0.5rem;
   flex: 1 1 1;
+  transition: all 1s;
+}
+
+.tooltipSkill {
+  transition: all ease-in-out 0.2s;
+  /* opacity: 0; */
+  max-width: max-content;
+  max-height: max-content;
+  align-items: center;
+  position: absolute;
+  top: -6em;
+  padding: 2rem;
+
+  background-color: #438cbd;
+  clip-path: polygon(
+    100% 37%,
+    100% 66%,
+    55% 68%,
+    61% 98%,
+    38% 68%,
+    0 67%,
+    0 36%
+  );
+
+  color: whitesmoke;
+  font-weight: 600;
+  font-size: 0.8rem;
+}
+
+.skillItem:hover {
+  transform: scale(110%);
 }
 
 .reverseProgress {
