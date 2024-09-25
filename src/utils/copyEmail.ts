@@ -1,16 +1,18 @@
 const CopyEmail = () => {
-  const copy = document.querySelector(".labelCopy") as HTMLElement;
+  const labelCopy = document.querySelector(".labelCopy") as HTMLElement;
+  const copyButton = document.getElementById("btCopy");
+  const textEmail = document.getElementById("emailText");
 
-  document.querySelector("#btCopy")?.addEventListener("click", (event) => {
+  copyButton?.addEventListener("click", (event) => {
     event.preventDefault();
-    copy.style.display = "flex";
+    textEmail!.style.color = "green";
+    labelCopy.style.display = "flex";
 
-    navigator.clipboard.writeText(
-      (document.querySelector(".emailText") as HTMLInputElement).innerHTML
-    );
+    navigator.clipboard.writeText(textEmail!.innerText);
 
     setTimeout(() => {
-      copy.style.display = "none";
+      labelCopy.style.display = "none";
+      textEmail!.style.color = "black";
     }, 2000);
   });
 };

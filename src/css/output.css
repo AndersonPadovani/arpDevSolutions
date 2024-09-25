@@ -2002,6 +2002,10 @@ video {
   background-color: rgb(22 163 74 / var(--tw-bg-opacity));
 }
 
+.bg-color-background-black {
+  background-color: #00000080;
+}
+
 .bg-\[url\(\'\.\.\/img\/icons\/copy\.png\'\)\] {
   background-image: url('../img/icons/copy.png');
 }

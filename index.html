@@ -22,7 +22,9 @@
     <link rel="stylesheet" href="./src/css/index.css" />
   </head>
   <body class="bg-color-background">
-    <main class="flex flex-col w-full items-center overflow-x-hidden h-max gap-5">
+    <main
+      class="flex flex-col w-full items-center overflow-x-hidden h-max gap-5"
+    >
       <nav
         id="top"
         class="flex w-2/3 h-28 items-center justify-center phone:justify-between"
@@ -87,12 +89,13 @@
               e compromisso.
             </p>
           </div>
-          <div class="copy">
+          <div class="flex flex-col items-center">
             <div class="flex relative">
               <button
                 class="w-14 h-14 bg-no-repeat bg-center bg-cover bg-[url('../img/icons/email.png')] rounded-l-md border border-black"
               ></button>
               <span
+                id="emailText"
                 class="flex justify-center items-center w-80 h-14 bg-[rgba(10,10,10,0.3)] border border-black font-bold text-lg"
               >
                 andersonpadovani@protonmail.com
@@ -102,7 +105,7 @@
                 class="w-14 h-14 bg-no-repeat bg-center bg-cover bg-[url('../img/icons/copy.png')] rounded-r-md border border-black cursor-pointer"
               ></button>
               <label
-                class="hidden absolute right-[-90px] top-2 flex items-center justify-center text-smoke font-bold bg-green-600 rounded-lg px-3 py-1"
+                class="labelCopy hidden absolute right-[-90px] top-2 items-center justify-center text-smoke font-bold bg-green-600 rounded-lg px-3 py-1"
                 for="btCopy"
                 >COPIADO</label
               >
@@ -142,7 +145,7 @@
 
       <section
         id="secTecnologic"
-        class="tecnologic flex flex-col items-center w-ful min-h-max bg-dark-blue"
+        class="tecnologic flex flex-col items-center w-ful min-h-max bg-dark-blue bg-color-background-black"
       >
         <div class="tec flex flex-col items-center w-full min-h-max">
           <h1
